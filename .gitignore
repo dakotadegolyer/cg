@@ -2,3 +2,4 @@ build/
 *.cg
 *.o
 main
+.vscode

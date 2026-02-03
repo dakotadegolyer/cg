@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -std=c++23 -Wall -Wextra -Wpedantic
 TARGET = main
-SRCS = main.cpp tokenizer.cpp
+SRCS = main.cpp tokenizer.cpp parser.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)

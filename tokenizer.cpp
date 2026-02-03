@@ -1,11 +1,7 @@
 #include "tokenizer.hpp"
 
 
-Tokenizer::Tokenizer(std::string in) {
-        input = in;
-        tokens = std::vector<Token>();
-        index = 0;
-        buf = "";
+Tokenizer::Tokenizer() {
 }
 
 std::string Tokenizer::tokenToString(Token t) {
@@ -23,8 +19,11 @@ std::string Tokenizer::tokenToString(Token t) {
     }
 }
 
-void Tokenizer::tokenize() {
-    buf.clear();
+std::vector<Token> Tokenizer::tokenize(std::string in) {
+    input = in;
+    tokens = std::vector<Token>();
+    index = 0;
+    buf = "";
 
     char c;
     while (inRange()) {
@@ -68,9 +67,15 @@ void Tokenizer::tokenize() {
             std::cerr << "Unrecognized character";
         }
     }
+    return tokens;
+    
+}
+
+void Tokenizer::printTokens() {
     for (Token t : tokens) {
             std::cout << tokenToString(t) << ", ";
     }
+    std::cout << std::endl;
 }
 
 bool Tokenizer::inRange() {

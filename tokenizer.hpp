@@ -47,10 +47,11 @@ private:
     }
     std::string tokenToString(Token t);
     bool inRange();
+    void printTokens();
 
 public:
-    Tokenizer(std::string in);
-    void tokenize();
+    Tokenizer();
+    std::vector<Token> tokenize(std::string in);
 
 };
 

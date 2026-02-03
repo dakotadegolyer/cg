@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <iterator>
+#include "parser.hpp"
 #include "tokenizer.hpp"
 
 
@@ -16,9 +17,9 @@ int main() {
                         std::istreambuf_iterator<char>());
     
     // std::cout << "Contents of file \n" << content << std::endl;
-    
-    Tokenizer tokenizer(content);
-    tokenizer.tokenize();
+
+    Parser parser;
+    parser.parse(content);
     }
 
     return 0;
