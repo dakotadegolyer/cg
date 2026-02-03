@@ -14,7 +14,7 @@ struct NodeIntLit;
 
 // definitions
 struct NodeStmtExit {
-    Token *ret;
+    NodeIntLit *ret;
 };
 
 struct NodeStmt {

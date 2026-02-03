@@ -8,7 +8,9 @@
 enum class TokenType {
     _EXIT,
     INT_LIT,
-    _SEMI
+    _SEMI,
+    _OPEN_PAREN,
+	_CLOSE_PAREN
 };
 
 struct Token {

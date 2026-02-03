@@ -1,5 +1,5 @@
 build/
-*.cg
+.cg
 *.o
 main
 .vscode

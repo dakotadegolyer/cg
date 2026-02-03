@@ -52,14 +52,21 @@ std::vector<Token> Tokenizer::tokenize(std::string in) {
             }
             if (buf == "exit") {
                 tokens.push_back({TokenType::_EXIT});
-                discard();
                 buf.clear();
             }
         }
         else if (c == ';') {
             discard();
             tokens.push_back({TokenType::_SEMI});
-        }   
+        }
+        else if (c == '(') {
+            discard();
+            tokens.push_back({ TokenType::_OPEN_PAREN});
+        }
+        else if (c == ')') {
+            discard();
+            tokens.push_back({ TokenType::_CLOSE_PAREN});
+        }
         else if (isspace(c)){
             discard();
         }
