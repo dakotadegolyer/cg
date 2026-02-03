@@ -7,8 +7,8 @@ As of 1/29/26 the language is in a limited state where only very basic functiona
 ## Syntax
 
 ### Exit
-Exiting the program uses the keyword **exit** and then the *integer* value that you wish to return
+Exiting the program uses the keyword **exit** and then the *integer* value that you wish to return surrounded by parentheses
 
 Example:
 
-`exit 0;`
+`exit (0);`
